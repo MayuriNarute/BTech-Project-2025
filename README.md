@@ -1,7 +1,7 @@
 # Precise Blood Cancer Detection using GANs and cross-modality data integration for optimal diagnostics
 
 ## Abstract
-Blood cancers, encompassing leukemia, lymphoma, and myeloma, are a diverse group of malignancies that affect the blood and bone marrow. 
+Blood cancers, encompassing leukemia, lymphoma, and myeloma, are a diverse group of malignancies that affect the blood and bone marrow.
 
 - **Leukemia**: Characterized by the uncontrolled production of abnormal blood cells in the bone marrow. It includes:
   - Acute Lymphoblastic Leukemia (ALL): A rapidly progressing cancer affecting immature lymphoid cells.
@@ -18,38 +18,24 @@ Blood cancers, encompassing leukemia, lymphoma, and myeloma, are a diverse group
 - **Myeloma**: Primarily refers to:
   - Multiple Myeloma: A cancer of the plasma cells in the bone marrow, characterized by the proliferation of abnormal plasma cells that produce abnormal proteins and can cause bone damage.
 
-## Aim
 This project aims to develop an advanced classification system for three blood cancers—leukemia, lymphoma, and myeloma—and their subtypes using a combination of Generative Adversarial Networks (GANs) and Convolutional Neural Networks (CNNs).
 
-## Objectives
-- To develop an innovative platform that accurately detects and classifies all three major blood cancer types—leukemia, lymphoma, and myeloma.
-- To use advanced AI techniques like GANs and CNNs to automatically and precisely classify different types of blood cancers.
-- To enhance diagnostic accuracy by leveraging publicly available datasets for leukemia, lymphoma, and myeloma, incorporating both tabular data (e.g., blood tests, gene expression) and imaging data (e.g., microscopic blood sample images).
-
-## Key Components
-A key component of the project is the development of a user-friendly web application to provide valuable insights and resources for healthcare professionals and patients, aiming to support clinical decision-making and improve patient education.
-
-## Focus
-The primary focus has been on:
-- Enhancing diagnostic accuracy
-- Generating synthetic data to augment small datasets
-
 ## Getting Started
-### Prerequisites
+### Technologies Used
 - Python 
 - Flask
 - HTML, CSS
+- Django
+- Tensorflow
+
+### Image Dataset Description
+The dataset contains a total of 17,092 images of individual normal cells, which were acquired using the analyzer CellaVision DM96 in the Core Laboratory at the Hospital Clinic of Barcelona. The dataset is organized in the following eight groups: neutrophils, eosinophils, basophils, lymphocytes, monocytes, immature granulocytes (promyelocytes, myelocytes, and metamyelocytes), erythroblasts and platelets or thrombocytes. The size of the images is 360 x 363 pixels, in format JPG, and they were annotated by expert clinical pathologists. The images were captured from individuals without infection, hematologic or oncologic disease and free of any pharmacologic treatment at the moment of blood collection.
+Here’s how the classes might be helpful in detecting the three main types of blood cancers:
+
+Leukemia: Basophils, lymphocytes, erythroblasts.
+Lymphoma: Lymphocytes, monocytes.
+Myeloma: Platelets, plasma cells and ig (immature granulocytes).
 
 ## Run the Flask application
 python app.py
 
-## Git Commands
-To manage your Git repository, here are some useful commands:
-
-- Initialize a new Git repository : git init
-- Add all changes to the staging area : git add .
-- Commit the changes with a message : git commit -m "Your commit message"
-- Add a remote repository : git remote add origin https://github.com/MayuriNarute/BTech-Project-2025.git
-- Push changes to the remote repository : git push -u origin main
-- Pull changes from the remote repository :  git pull origin main
-- Force push changes to the remote repository : git push -u origin main --force
