@@ -39,3 +39,17 @@ The primary focus has been on:
 - Python 
 - Flask
 - HTML, CSS
+
+## Run the Flask application
+python app.py
+
+## Git Commands
+To manage your Git repository, here are some useful commands:
+
+- Initialize a new Git repository : git init
+- Add all changes to the staging area : git add .
+- Commit the changes with a message : git commit -m "Your commit message"
+- Add a remote repository : git remote add origin https://github.com/MayuriNarute/BTech-Project-2025.git
+- Push changes to the remote repository : git push -u origin main
+- Pull changes from the remote repository :  git pull origin main
+- Force push changes to the remote repository : git push -u origin main --force
