@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showFields() {
+            var role = document.getElementById("role").value;
+            document.getElementById("doctorFields").style.display = (role === "doctor") ? "block" : "none";
+            document.getElementById("labAssistantFields").style.display = (role === "lab_assistant") ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2 class="header-text">Welcome to Blood Cancer Detection System</h2>
+        </div>
+        <div class="signup-container">
+            <h2>Signup</h2>
+            <form action="/signup" method="POST">
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="full_name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="role">Role</label>
+                <select id="role" name="role" onchange="showFields()" required>
+                    <option value="">Select Role</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="lab_assistant">Lab Assistant</option>
+                </select>
+
+                <!-- Doctor Fields -->
+                <div id="doctorFields" class="hidden">
+                    <label for="license">Medical License Number</label>
+                    <input type="text" id="license" name="license">
+
+                    <label for="specialization">Specialization</label>
+                    <input type="text" id="specialization" name="specialization">
+
+                    <label for="hospital">Hospital/Clinic Name</label>
+                    <input type="text" id="hospital" name="hospital">
+                </div>
+
+                <!-- Lab Assistant Fields -->
+                <div id="labAssistantFields" class="hidden">
+                    <label for="employee_id">Employee ID</label>
+                    <input type="text" id="employee_id" name="employee_id">
+
+                    <label for="lab_name">Laboratory Name</label>
+                    <input type="text" id="lab_name" name="lab_name">
+                </div>
+
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
