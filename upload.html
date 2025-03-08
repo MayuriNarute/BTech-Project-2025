@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="upload.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Blood Cancer Detection System</h2>
+        </div>
+        <div class="upload-container">
+            <h2>Upload Image</h2>
+            <form id="uploadForm">
+                <div id="drop-area">
+                    <p>Drag & Drop an image or click to select</p>
+                    <input type="file" id="image" name="image[]" accept="image/*" multiple required>
+                </div>
+
+                <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 100%; margin-top: 10px;">
+
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Image Preview
+        function previewImage(event) {
+            var reader = new FileReader();
+            reader.onload = function() {
+                var preview = document.getElementById('imagePreview');
+                preview.src = reader.result;
+                preview.style.display = 'block';
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+        document.getElementById("image").addEventListener("change", previewImage);
+
+        // File Validation
+        document.getElementById("image").addEventListener("change", function() {
+            var file = this.files[0];
+            if (file) {
+                var fileSizeMB = file.size / 1024 / 1024;
+                var validTypes = ["image/jpeg", "image/png", "image/jpg"];
+                
+                if (!validTypes.includes(file.type)) {
+                    alert("Only JPG, PNG, or JPEG files are allowed.");
+                    this.value = "";
+                } else if (fileSizeMB > 5) {
+                    alert("File size must be under 5MB.");
+                    this.value = "";
+                }
+            }
+        });
+
+        // Prevent Form Submission (Since No Backend Yet)
+        document.getElementById("uploadForm").onsubmit = function(event) {
+            event.preventDefault();
+            alert("Image uploaded successfully!");
+        };
+    </script>
+</body>
+</html>
