@@ -1,0 +1,143 @@
+/* Reset and Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ffe5e5, #ffcccc); /* Light red gradient */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Page Layout */
+.container {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 35%;
+    background: #d32f2f; /* Darker red shade */
+    color: white; /* Ensure text inside is white */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Sidebar Heading */
+.header-text {
+    color: #ffffff !important; /* Force white text */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Signup Form Container */
+.signup-container {
+    width: 65%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Heading */
+h2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Form Inputs */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: 600;
+    font-size: 15px;
+    color: #333;
+    margin-top: 12px;
+}
+
+form input,
+form select {
+    padding: 12px;
+    margin-top: 5px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+}
+
+/* Input Focus Effect */
+form input:focus,
+form select:focus {
+    border-color: #d32f2f;
+    outline: none;
+    box-shadow: 0 0 6px rgba(211, 47, 47, 0.5);
+}
+
+/* Role-Based Fields */
+.hidden {
+    display: none;
+}
+
+#doctorFields, #labAssistantFields {
+    margin-top: 12px;
+    padding: 18px;
+    border: 1.5px solid #ddd;
+    border-radius: 6px;
+    background: #f9f9f9;
+}
+
+/* Button */
+button {
+    background-color: #d32f2f;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #b71c1c;
+    transform: scale(1.03);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        max-width: 90%;
+    }
+    .sidebar {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+    .signup-container {
+        width: 100%;
+    }
+}
