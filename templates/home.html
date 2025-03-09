@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="/static/css/style.css">
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,48 +5,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Blood Cancer Detection</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Embedded CSS -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #0056b3 !important;
+            padding: 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #ffffff !important;
+            font-size: 22px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffcc00 !important;
+            transform: scale(1.05);
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .home-container {
+            max-width: 600px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* Search Box */
+        .form-control {
+            height: 45px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .btn-custom {
+            color: #ffffff;
+            background-color: #0056b3;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-custom:hover {
+            background-color: #003d80;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: auto;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Blood Cancer Detection</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/signup">Sign Up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/aboutus">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/signup">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/aboutus">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
                 </ul>
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <input class="form-control me-2" type="search" placeholder="Search">
                 </form>
             </div>
         </div>
     </nav>
 
     <!-- Main Content Section -->
-    <div class="container">
-        <center>
-        <h1>Welcome to Blood Cancer Detection</h1>
-        <p>Use this platform to detect blood cancer by uploading a medical report or image.</p>
-        </centre>
+    <div class="main-content">
+        <div class="home-container">
+            <h1>Welcome to Blood Cancer Detection</h1>
+            <p>Use this platform to detect blood cancer by uploading a medical report or image.</p>
+        </div>
     </div>
 
     <!-- Footer Section -->
@@ -55,7 +143,7 @@
         <p>&copy; 2025 Blood Cancer Detection Platform. All rights reserved.</p>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 </body>
