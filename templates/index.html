@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Cancer Prediction</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <h1>Blood Cancer Prediction</h1>
+
+    <input type="file" id="imageUpload" accept="image/*">
+    <button onclick="uploadImage()">Upload & Predict</button>
+
+    <!-- Chart Section -->
+    <canvas id="probabilityChart" style="width: 400px; height: 200px;"></canvas>
+    <h2 id="predictedClass"></h2>
+
+    <!-- Original and Enhanced Image Section -->
+    <div style="display: flex; justify-content: center; gap: 40px; margin-top: 20px;">
+        <div>
+            <h3>Original Image</h3>
+            <img id="originalImage" src="" alt="Original" width="256">
+        </div>
+        <div>
+            <h3>Enhanced Image</h3>
+            <img id="enhancedImage" src="" alt="Enhanced" width="300">
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
